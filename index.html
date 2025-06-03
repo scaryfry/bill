@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bills Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <aside class="sidebar">
+        <h2>Bills</h2>
+        <nav>
+            <ul>
+                <li onclick="addPerson()">➕ Add Person</li>
+                <li onclick="UpdatePerson()">✏️ Edit Person</li>
+                <li onclick="deletePerson()">🗑️ Delete Person</li>
+                <li onclick="addBill()">➕ Add Bill</li>
+                <li onclick="updateBill()">✏️ Edit Bill</li>
+                <li onclick="deleteBill()">🗑️ Delete Bill</li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <header>
+            <h1>Bill Management Dashboard</h1>
+        </header>
+        <section id="content" class="card-container">
+        </section>
+        <div id="message"></div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
