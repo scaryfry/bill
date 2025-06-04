@@ -324,9 +324,9 @@ async function addBill() {
         <h2>Add Bill</h2>
         <div>
             <h3>Buyers</h3>
-            <ul>${buyersList}</ul>
-            <h3>Sellers</h3>
             <ul>${sellersList}</ul>
+            <h3>Sellers</h3>
+            <ul>${buyersList}</ul>
             <h3>Bills</h3>
             <ul>${billsList}</ul>
         </div>
@@ -423,9 +423,9 @@ async function editBill() {
         <h2>Edit Bill</h2>
         <div>
             <h3>Buyers</h3>
-            ${buyersList}
-            <h3>Sellers</h3>
             ${sellersList}
+            <h3>Sellers</h3>
+            ${buyersList}
             <h3>Bills</h3>
             ${billsList}
         </div>
@@ -499,8 +499,6 @@ function updateBill() {
     }
 }
 async function deleteBill() {
-    const buyers = await fetchBuyers() || [];
-    const sellers = await FetchSellers() || [];
     const bills = await FetchBills() || [];
     const billsList = bills.length
         ? `<table><tr><th>Seller ID</th><th>Buyer ID</th><th>Bill number</th><th>Creation Date</th><th>Completed date</th><th>Deadline</th><th>Total</th><th>VAT</th><th>Action</th></tr>${
