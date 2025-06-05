@@ -19,9 +19,6 @@ export const updateSeller = (id, name, address, taxNumber) => db
 export const deleteSeller = (id) => db
     .prepare('DELETE FROM sellers WHERE id =?').run(id);
 
-// export const getSellerTaxNumbers = () => db
-//     .prepare('SELECT taxNumber FROM sellers').all();
-
 // Buyers functions
 export const getBuyers = () => db
     .prepare('SELECT * FROM buyers').all();
@@ -34,9 +31,6 @@ export const updateBuyer = (id, name, address, taxNumber) => db
 
 export const deleteBuyer = (id) => db
     .prepare('DELETE FROM buyers WHERE id =?').run(id);
-
-// export const getBuyerTaxNumbers = () => db
-//     .prepare('SELECT taxNumber FROM buyers').all();
 
 // Bills functions
 export const getBills = () => db

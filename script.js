@@ -16,6 +16,7 @@ function showContent(html) {
     content.style.display = 'block';
 
 }
+//Fetches
 async function fetchBuyers() {
     try {
  const res = await fetch(`http://localhost:8080/sellers`, {
@@ -81,6 +82,7 @@ function showMessage(message) {
     alert(message);
 }
 
+//Adds and creates persons
 function CreatePerson() {
     const personType = document.querySelector('select').value;
     const name = document.querySelector('input[placeholder="Name"]').value;
@@ -140,6 +142,7 @@ function addPerson() {
 
 }
 
+//Edit persons
 async function EditPerson() {
     const personType = document.querySelector('select').value;
     const id = document.querySelector('input[placeholder="Enter ID"]')?.value || document.querySelector('input[placeholder="ID"]')?.value;
@@ -239,6 +242,7 @@ async function UpdatePerson() {
     `);
 }
 
+//Delete persons
 async function RemovePerson() {
     try {
         const personType = document.querySelector('#personTypeSelect').value;
@@ -298,6 +302,7 @@ async function deletePerson() {
         <button onclick="RemovePerson()">Delete</button>
     `);
 }
+//Add bills
 async function addBill() {
     const buyers = await fetchBuyers() || [];
     const sellers = await FetchSellers() || [];
@@ -386,6 +391,7 @@ function createBill() {
         showMessage('Error creating bill');
     }
 }
+//Edit bills
 async function editBill() {
     const buyers = await fetchBuyers() || [];
     const sellers = await FetchSellers() || [];
@@ -498,6 +504,7 @@ function updateBill() {
         showMessage('Error updating bill');
     }
 }
+//Delete bills
 async function deleteBill() {
     const bills = await FetchBills() || [];
     const billsList = bills.length

@@ -18,17 +18,6 @@ app.get("/buyers", (req, res) => {
         res.status(500).json({ message: `${err}` });
     }
 })
-
-// app.get("/buyers/taxNumbers", (req, res) => {
-//     try {
-//         const taxNumbers = db.getBuyerTaxNumbers();
-//         res.status(200).json(taxNumbers);
-//     }
-//     catch (err) {
-//         res.status(500).json({ message: `${err}` });
-//     }
-// })
-
 app.post("/buyers", (req, res) => {
     try {
         const { name, address, taxNumber } = req.body;
@@ -87,17 +76,6 @@ app.get("/sellers", (req, res) => {
         res.status(500).json({ message: `${err}` });
     }
 })
-
-// app.get("/sellers/taxNumbers", (req, res) => {
-//     try {
-//         const taxNumbers = db.getSellerTaxNumbers();
-//         res.status(200).json(taxNumbers);
-//     }
-//     catch (err) {
-//         res.status(500).json({ message: `${err}` });
-//     }
-// })
-
 
 app.post("/sellers", (req, res) => {
     try {
